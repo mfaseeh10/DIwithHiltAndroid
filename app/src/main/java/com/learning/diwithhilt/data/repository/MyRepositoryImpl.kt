@@ -4,9 +4,8 @@ import android.app.Application
 import com.learning.diwithhilt.R
 import com.learning.diwithhilt.data.remote.api.MyApi
 import com.learning.diwithhilt.domain.repository.MyRepository
-import javax.inject.Inject
 
-class MyRepositoryImpl @Inject constructor(
+class MyRepositoryImpl (
     private val api: MyApi,
     private val appContext: Application
 ): MyRepository {
