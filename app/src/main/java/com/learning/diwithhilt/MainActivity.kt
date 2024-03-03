@@ -10,15 +10,18 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.hilt.navigation.compose.hiltViewModel
 import com.learning.diwithhilt.domain.repository.MyRepository
 import com.learning.diwithhilt.ui.theme.DIwithHiltTheme
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
             DIwithHiltTheme {
-//                val viewModel = MyViewModel()
+                val viewModel = hiltViewModel<MyViewModel>()
             }
         }
     }
